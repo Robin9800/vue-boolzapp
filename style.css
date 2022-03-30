@@ -1,0 +1,36 @@
+/*CONTENT*/
+.user{
+    background-color: hsl(0deg 0% 92%);
+}
+.notification{
+   background-color: hsl(199deg 95% 77%);
+}
+.notification h3{
+    font-size: 12px;
+}
+.notification a{
+    color: hsl(190deg 6% 43%);
+    font-size: 12px;
+}
+.notification i{
+    font-size: 20px;
+    color: white;
+}
+.user img{
+    width: 50px;
+    border-radius: 50%;
+}
+.user i{
+    color: hsl(0deg 0% 69%);
+    font-size: 20px;
+    margin: 0px 4px;
+}
+.search{
+    background-color: hsl(0deg 0% 98%);
+}
+.search input{
+    width: 98%;
+    margin: 3px 0;
+    padding: 8px 0;
+    font-size: 12px;
+}
