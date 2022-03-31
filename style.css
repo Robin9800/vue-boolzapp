@@ -28,9 +28,16 @@
 .search{
     background-color: hsl(0deg 0% 98%);
 }
+.search i{
+    color:hsl(0deg 0% 69%);
+
+}
 .search input{
-    width: 98%;
-    margin: 3px 0;
+    width: 100%;
+    margin: 7px 0;
     padding: 8px 0;
     font-size: 12px;
+}
+.chat-container{
+    background-image: url("img-bolzapp/mine.jpg");
 }
