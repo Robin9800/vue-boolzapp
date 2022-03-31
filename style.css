@@ -1,4 +1,7 @@
 /*CONTENT*/
+body,html{
+    height: 100vh;
+}
 .user{
     background-color: hsl(0deg 0% 92%);
 }
@@ -33,6 +36,9 @@
     font-size: 20px;
     margin: 0px 4px;
 }
+.contacts-list{
+    overflow-y: scroll;
+}
 .search{
     background-color: hsl(0deg 0% 98%);
 }
@@ -58,6 +64,9 @@
 .chat-actions{
     background-color: hsl(27deg 27% 94%);
 }
+.chat-actions i{
+    color: hsl(196deg 5% 44%);
+}
 .chat-actions input{
     height: 40px;
     border-radius: 5px;
@@ -78,6 +87,12 @@
 .received{
     background-color: white;
 }
+.chat{
+    overflow-y: scroll;
+}
 .chat .time p{
     font-size: 10px;
+}
+#root{
+    max-height: 100vh;
 }
