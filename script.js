@@ -165,6 +165,13 @@ const contacts = [
 const app = new Vue({
     el: '#root',
     data: {
-        contacts
+        contacts,
+    },
+    methods: {
+        getLastMessage(contact){
+            const messages = contact.messages;
+            const lastMessage = messages[messages.length-1].message;
+            return lastMessage;
+        }
     }
 })
