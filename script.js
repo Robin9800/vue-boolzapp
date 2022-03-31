@@ -161,3 +161,10 @@ const contacts = [
         ],
     }
 ]
+
+const app = new Vue({
+    el: '#root',
+    data: {
+        contacts
+    }
+})

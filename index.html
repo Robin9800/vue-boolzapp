@@ -10,18 +10,18 @@
     <title>Boolzap</title>
 </head>
 <body>
-    <div class="container my-3">
+    <div id="root" class="container my-3">
         <div class="row d-flex">
             <!--CONTAINER LEFT-->
             <div class="contact-container px-0 col-4 border">
-                <div class="user py-2 border justify-content-between">
+                <div class="user py-2 border d-flex flex-row justify-content-between">
                     <!--USER INFO-->
-                    <div class="user-info d-flex flex-row">
+                    <div class="user-info d-flex">
                         <img src="img-bolzapp/avatar_io.jpg" class="ps-2" alt="Sofia">
-                        <h2 class="fs-6">Sofia</h2>
+                        <h2 class="fs-6 align-self-center">Sofia</h2>
                     </div>
                     <!--ICON CONTACTS-->
-                    <div class="icon-contacts">
+                    <div class="icon-contacts d-flex align-items-center me-2">
                         <i class="fa-solid fa-circle-notch"></i>
                         <i class="fa-solid fa-message"></i>
                         <i class="fa-solid fa-bars"></i>
@@ -29,25 +29,36 @@
 
                 </div>
                 <!--NOTIFICATION-->
-                <div class="notification border">
-                    <i class="fa-solid fa-bell-slash"></i>
-                    <h3 class="mt-2 mb-0">Ricevi notifiche di nuovi messaggi</h3>
-                    <a href="#">Attiva notifiche desktop</a>
+                <div class="notification border d-flex">
+                    <div class="bell d-flex align-items-center my-2 mx-3">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </div>
+                    <div class="notifications-info my-2">
+                        <h3 class="mb-0 mt-1">Ricevi notifiche di nuovi messaggi</h3>
+                        <a href="#">Attiva notifiche desktop</a>
+                    </div>
                 </div>
                 <!--SEARCH BAR-->
                 <div class="search d-flex justify-content-end align-items-center">
                     <i class="fa-solid fa-magnifying-glass py-2 px-3"></i>
-                    <input class="border" type="search" placeholder="Cerca o inizia una nuova chat">
+                    <input class="border me-2" type="search" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <!--CONTACT LIST-->
-                <div class="contacts-list border">
-                    <div class="contact-item">
-                        <div class="user-info d-flex flex-row">
-                            <img src="img-bolzapp/avatar_io.jpg" class="p-2" alt="Sofia">
-                            <div class="info d-flex flex-column justify-content-between">
-                                <h2 class="fs-6 mb-0">Sofia</h2>
-                                <p class="mb-0">Ultimo messaggio</p>
-                                <p class="mb-0">12:10</p>
+                <div class="contacts-list">
+                    <div v-for="contact in contacts" class="contact-item">
+                        <div class="user-info border-bottom border-top d-flex justify-content-between">
+                            <div class="info d-flex">
+                                <img :src="'img-bolzapp/avatar'+ contact.avatar +'.jpg'" 
+                                class="p-1 ms-1 me-2 my-1" 
+                                :alt="contact.name">
+                                <div class="info-user mt-1 flex-column">
+                                    <h2 class="fs-6 mb-0 pt-1">{{contact.name}}</h2>
+                                    <p class="mb-0">{{getLastMessage()}}</p>
+                                </div>
+                             </div>
+                            <!--TIME-->
+                            <div class="time">
+                                <p class="mb-0 me-2 mt-1">12:10</p>
                             </div>
                             
                         </div>
@@ -55,22 +66,60 @@
                 </div>
             </div>
             <!--CONTAINER RIGHT-->
-            <div class="chat-container px-0 col-8 border">
+            <div class="chat-container d-flex flex-column justify-content-between px-0 col-8">
                 <div class="selected-contact border">
-                    <div class="user py-2 border justify-content-between">
+                    <div class="user py-1 ps-1 d-flex justify-content-between">
                         <div class="user-info d-flex flex-row">
-                            <img src="img-bolzapp/avatar_io.jpg" class="ps-2" alt="Sofia">
-                            <h2 class="fs-6">Sofia</h2>
+                            <div class="info-user-chat d-flex align-items-center">
+                                <img src="img-bolzapp/avatar_1.jpg" class="p-1 me-2 my-1" alt="Michele">
+                                <div class="info-user mt-1 flex-column">
+                                    <h2 class="fs-6 mb-0">Michele</h2>
+                                    <p class="mb-0">Ultimo accesso oggi alle 12:00</p>
+                                </div>
+                             </div>
                         </div>
-                        <div class="icon-contacts">
+                        <div class="icon-contacts d-flex align-items-center me-2">
                             <i class="fa-solid fa-circle-notch"></i>
                             <i class="fa-solid fa-message"></i>
                             <i class="fa-solid fa-bars"></i>
                         </div>
                      </div>
                  </div>
-                 <div class="chat border"></div>
-                 <div class="chat-actions border"></div>
+                 <!--CHAT-->
+                 <div class="chat d-flex flex-column">
+                     <div class="message d-flex align-self-end py-2 px-2 mx-4 mb-3 sent">
+                         <div class="text me-3">
+                            <p class="mb-1">Hai portato a spasso il cane?</p>
+                         </div>
+                         <div class="time d-flex py-0">
+                            <p class="mb-0 d-flex align-items-end">12:10</p>
+                        </div>
+                     </div>
+
+                     <div class="message d-flex align-self-end py-2 px-2 mx-4 mb-3 sent">
+                        <div class="text me-3">
+                           <p class="mb-1">Ricordati di stendere i panni</p>
+                        </div>
+                        <div class="time d-flex py-0">
+                           <p class="mb-0 d-flex align-items-end">12:10</p>
+                       </div>
+                    </div>
+
+                    <div class="message d-flex align-self-start py-2 align-items-start px-2 mx-4 mb-3 received">
+                        <div class="text me-3">
+                           <p class="mb-1">Tutto fatto!</p>
+                        </div>
+                        <div class="time d-flex align-self-end py-0">
+                           <p class="mb-0">16:15</p>
+                       </div>
+                    </div>
+                 </div>
+                 <!--CHAT ACTIONS-->
+                 <div class="chat-actions d-flex align-items-center justify-content-around">
+                    <i class="fa-solid fa-circle-notch my-2"></i>
+                    <input class="border my-2" type="search" placeholder="Scrivi un messaggio">
+                    <i class="fa-solid fa-bars my-2"></i>
+                 </div>
             </div>
         </div>
 

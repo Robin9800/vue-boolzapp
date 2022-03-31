@@ -16,8 +16,16 @@
     font-size: 20px;
     color: white;
 }
+.bell{
+    padding: 10px;
+    border-radius: 50%;
+    background-color: white;
+}
+.bell i{
+    color:hsl(199deg 95% 77%);
+}
 .user-info img{
-    width: 50px;
+    height: 50px;
     border-radius: 50%;
 }
 .user i{
@@ -40,13 +48,37 @@
 }
 .chat-container{
     background-image: url("img-bolzapp/mine.jpg");
+    height: 93vh;
 }
-.user-info{
-    background-color: hsl(180deg 5% 92%);
-}
-.user-info img{
-    height: 50px;
-}
-.info p{
+
+.info p,.time p{
+    color:hsl(216deg 5% 78%);
     font-size: 12px;
+}
+.chat-actions{
+    background-color: hsl(27deg 27% 94%);
+}
+.chat-actions input{
+    height: 40px;
+    width: 80%;
+    border-radius: 5px;
+}
+.info-user-chat p{
+    font-size: 12px;
+    color: hsl(200deg 4% 71%)
+}
+.message{
+    max-width: 300px;
+    color: black;
+    border-radius: 8px;
+    font-size: 12px;
+}
+.sent{
+    background-color: hsl(94deg 84% 85%);
+}
+.received{
+    background-color: white;
+}
+.chat .time p{
+    font-size: 10px;
 }
