@@ -2,6 +2,12 @@
 body,html{
     height: 100vh;
 }
+#root{
+    height: 100vh;
+}
+.wa-container{
+    max-height: 100%;
+}
 .user{
     background-color: hsl(0deg 0% 92%);
 }
@@ -54,7 +60,6 @@ body,html{
 }
 .chat-container{
     background-image: url("img-bolzapp/mine.jpg");
-    height: 93vh;
 }
 
 .info p,.time p{
@@ -92,7 +97,4 @@ body,html{
 }
 .chat .time p{
     font-size: 10px;
-}
-#root{
-    max-height: 100vh;
 }
