@@ -41,6 +41,9 @@
 .chat-container{
     background-image: url("img-bolzapp/mine.jpg");
 }
+.user-info{
+    background-color: hsl(180deg 5% 92%);
+}
 .user-info img{
     height: 50px;
 }
