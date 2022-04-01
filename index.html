@@ -58,7 +58,7 @@
                              </div>
                             <!--TIME-->
                             <div class="time">
-                                <p class="mb-0 me-2 mt-1">12:10</p>
+                                <p class="mb-0 me-2 mt-1">{{getLastDate(contact)}}</p>
                             </div>
                             
                         </div>
@@ -76,7 +76,7 @@
                                 <img :src="'img-bolzapp/avatar'+ contactActive.avatar +'.jpg'" class="p-1 me-2 my-1" alt="Michele">
                                 <div class="info-user mt-1 flex-column">
                                     <h2 class="fs-6 mb-0">{{contactActive.name}}</h2>
-                                    <p class="mb-0">Ultimo accesso oggi alle {{getLastDate.temporary}}</p>
+                                    <p class="mb-0">Ultimo accesso oggi alle {{contactActive.date}}</p>
                                 </div>
                              </div>
                         </div>
