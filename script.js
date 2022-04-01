@@ -158,7 +158,8 @@ const app = new Vue({
             this.contactActive = contact
         },
         getLastDate(contact){
-            const lastDate = contactActive.date;
+            const lastMessage = this.getLastMessage(contact);
+            const date = lastMessage.date
             const fullhour = date.split(' ')[1];
             const temporary = fullhour.split(':');
             return temporary[0] + ':' + temporary[1];
