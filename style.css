@@ -1,5 +1,15 @@
 /*CONTENT*/
+.background-1 {
 
+    background-size: auto 20%;
+    background-color: hsl(174deg 100% 29%);
+}
+.wa-container{
+    height: 90vh;
+}
+.contacts-container{
+    flex-grow: 1;
+}
 #root{
     height: 100vh;
 }
@@ -22,9 +32,7 @@
 }
 .user-info{
     cursor: pointer;
-}
-.user-info:hover{
-    background-color: #00000009;
+    background-color: white;
 }
 .bell{
     padding: 10px;
@@ -33,6 +41,9 @@
 }
 .bell i{
     color:hsl(199deg 95% 77%);
+}
+.user .user-info{
+    background-color: hsl(0deg 0% 92%);
 }
 .user-info img{
     height: 50px;
@@ -45,6 +56,8 @@
 }
 .contacts-list{
     overflow-y: scroll;
+    background-color: white;
+    flex-grow: 1;
 }
 .search{
     background-color: hsl(0deg 0% 98%);
@@ -89,9 +102,11 @@
 }
 .sent{
     background-color: hsl(94deg 84% 85%);
+    align-self: end;
 }
 .received{
     background-color: white;
+    align-self: start;
 }
 .chat{
     overflow-y: scroll;

@@ -135,7 +135,8 @@ const contacts = [
                 date: '15:50',
                 message: 'Grazie per avermelo ricordato, le scrivo subito!',
                 status: 'received'
-            }
+            },
+            
         ],
     },
     
