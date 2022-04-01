@@ -25,6 +25,12 @@ body,html{
     font-size: 20px;
     color: white;
 }
+.user-info{
+    cursor: pointer;
+}
+.user-info:hover{
+    background-color: #00000009;
+}
 .bell{
     padding: 10px;
     border-radius: 50%;

@@ -46,7 +46,7 @@
                 <!--CONTACT LIST-->
                 <div class="contacts-list">
                     <div v-for="contact in contacts" class="contact-item">
-                        <div class="user-info border-bottom border-top d-flex justify-content-between">
+                        <div class="user-info border-bottom border-top d-flex justify-content-between" @click="setContactActive(contact)">
                             <div class="info d-flex">
                                 <img :src="'img-bolzapp/avatar'+ contact.avatar +'.jpg'" 
                                 class="p-1 ms-1 me-2 my-1" 
@@ -70,10 +70,12 @@
                 <div class="selected-contact border">
                     <div class="user py-1 ps-1 d-flex justify-content-between">
                         <div class="user-info d-flex flex-row">
+                            <!--USER ACTIVE-->
                             <div class="info-user-chat d-flex align-items-center">
-                                <img src="img-bolzapp/avatar_1.jpg" class="p-1 me-2 my-1" alt="Michele">
+                                <!--Imposto l'immagine il titolo e il p dinamicamente cosi che cambino per ogni user cliccato-->
+                                <img :src="'img-bolzapp/avatar'+ contactActive.avatar +'.jpg'" class="p-1 me-2 my-1" alt="Michele">
                                 <div class="info-user mt-1 flex-column">
-                                    <h2 class="fs-6 mb-0">Michele</h2>
+                                    <h2 class="fs-6 mb-0">{{contactActive.name}}</h2>
                                     <p class="mb-0">Ultimo accesso oggi alle 12:00</p>
                                 </div>
                              </div>
@@ -87,7 +89,7 @@
                  </div>
                  <!--CHAT-->
                  <div class="chat flex-grow-1 pt-5 t-5 d-flex flex-column">
-                     <div class="message d-flex align-self-end py-2 px-2 mx-4 mb-3 sent">
+                     <div class="message d-flex align-self-end py-2 px-2 mx-4 mb-3 sent" >
                          <div class="text me-3">
                             <p class="mb-1">Hai portato a spasso il cane?</p>
                          </div>
