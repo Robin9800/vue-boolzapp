@@ -156,6 +156,12 @@ const app = new Vue({
         },
         setContactActive(contact){
             this.contactActive = contact
+        },
+        getLastDate(contact){
+            const lastDate = contactActive.date;
+            const fullhour = date.split(' ')[1];
+            const temporary = fullhour.split(':');
+            return temporary[0] + ':' + temporary[1];
         }
     }
 })
