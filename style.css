@@ -1,11 +1,23 @@
 /*CONTENT*/
-.background-1 {
-
-    background-size: auto 20%;
-    background-color: hsl(174deg 100% 29%);
-}
 .wa-container{
     height: 90vh;
+    z-index: 1;
+}
+.background{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+.color-1{
+
+    height: 15vh;
+    background-color: hsl(174deg 100% 29%);
+
+}
+.color-2{
+    height: 85vh;
+    background-color: hsl(90deg 8% 85%);
 }
 .contacts-container{
     flex-grow: 1;
