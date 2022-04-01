@@ -1,12 +1,7 @@
 /*CONTENT*/
-body,html{
-    height: 100vh;
-}
+
 #root{
     height: 100vh;
-}
-.wa-container{
-    max-height: 100%;
 }
 .user{
     background-color: hsl(0deg 0% 92%);
